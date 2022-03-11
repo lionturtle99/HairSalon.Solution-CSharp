@@ -3,9 +3,9 @@
 }
 
 @using HairSalon.Models;
-@model HairSalon.Models.Restaurant
+@model HairSalon.Models.Client
 
-<h1>Add a restaurant</h1>
+<h1>Add a client</h1>
 <div class="form-group">
 @using (Html.BeginForm())
 {
@@ -31,11 +31,11 @@
   </select>
   </div>
   <div class="form-group">
-    @Html.LabelFor(model => model.Cuisine)
-    @Html.DropDownList("CuisineId")
+    @Html.LabelFor(model => model.Stylist)
+    @Html.DropDownList("StylistId")
   </div>
   
-  <input type="submit" value="Add new Restaurant" />
+  <input type="submit" value="Add new Client" />
 }
 </div>
-<p>@Html.ActionLink("Show all restaurants", "Index")</p>
+<p>@Html.ActionLink("Show all clients", "Index")</p>

@@ -3,16 +3,15 @@
 }
 
 @using HairSalon.Models;
-@model List<HairSalon.Models.Cuisine>;
+@model List<HairSalon.Models.Stylist>;
 
-<h1>Cuisines</h1>
+<h2>Stylists</h2>
 
 <ul>
-  @foreach( Cuisine cuisine in Model)
+  @foreach( Stylist stylist in Model)
   {
-    <li>@Html.ActionLink($"{cuisine.Type}", "Details", new { id = cuisine.CuisineId })</li>
+    <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li>
   }
 </ul>
 
-<p>@Html.ActionLink("Add new cuisine", "Create")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<button>@Html.ActionLink("Add new stylist", "Create")</button>
