@@ -1,12 +1,44 @@
-body{
+body {
   background: linear-gradient( red, orange, rgb(255, 187, 0), green);
   font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
-.container{
+.container {
   padding: 3em;
 }
-h1 {
+.jumbotron {
+  background-image: url('~/img/salon.jpeg');
   text-align: center;
-  margin-bottom: 5em;
+  padding: 3em;
+}
+.navbar {
+	width: 100%;
+	position: absolute;
+  top:0;
+  left:0;
+	z-index: 1;
+  padding:20px 40px;
+}
+.navbar ul {
+	height: 50px;
+	float: right;
+}
+.navbar ul li {
+	display: inline-block;
+	padding-top: 40px;
+  padding-right:5em;
+	font-size: 20px;
+}
+nav ul li a{
+  text-decoration:none;
+  color:rgb(25, 25, 25);
+  font-weight:bold;
+}
+nav ul li a:hover{
+  text-decoration:none;
+  color:red;
+}
+.logo{
+  width:auto;
+  max-height:100px;
 }
