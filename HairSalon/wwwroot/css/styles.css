@@ -6,7 +6,9 @@ body {
 }
 .jumbotron {
   margin: 10em 0 5em 0;
-  background-image: url('~/img/salon.jpeg');
+  background: none;
+  background-image: url('../img/salon.jpeg');
+  background-repeat: no-repeat;
   text-align: center;
   padding: 3em;
 }
@@ -41,4 +43,8 @@ nav ul li a:hover{
 .logo{
   width:auto;
   max-height:100px;
+}
+h5{
+  text-align: center;
+  margin: 2em;
 }
