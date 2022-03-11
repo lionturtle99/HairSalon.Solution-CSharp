@@ -1,19 +1,18 @@
-@* @{
+@{
   Layout = "_Layout";
 }
 
 @model HairSalon.Models.Stylist
 @using HairSalon.Models
 
-<h2>Clients for this stylist</h2>
 <hr />
-<h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h4>
-<p>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</p>
+<h2>@Html.DisplayFor(model => model.Name) Details<h2>
+<p>@Html.DisplayFor(model => model.Description)</p>
 
 <br>
 
 <div class="clients">
-  <h5>Clients for this stylist</h5>
+  <h3>Clients for this stylist</h3>
   <ul>
     @foreach (Client client in Model.Clients)
     {
@@ -23,4 +22,4 @@
 </div>
 
 <buttton>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</button>
-<button>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</button> *@
+<button>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</button>

@@ -1,7 +1,7 @@
 body {
   background: linear-gradient( rgb(253, 155, 155), rgb(238, 188, 188), rgb(255, 219, 219), white);
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  color: rgb(0, 0, 0);
   height: 100vh;
 }
 .jumbotron {
@@ -44,7 +44,7 @@ nav ul li a:hover{
   width:auto;
   max-height:100px;
 }
-h5{
+h3, h2{
   text-align: center;
   margin: 2em;
 }
