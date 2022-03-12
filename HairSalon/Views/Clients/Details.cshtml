@@ -1,4 +1,4 @@
-@* @{
+@{
   Layout = "_Layout";
 }
 
@@ -7,21 +7,5 @@
 <h2>Client Details</h2>
 
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-<h3>@Html.DisplayNameFor(model => model.PricePoint): 
-@for (int x = 0; x < Model.PricePoint; x++) 
-{
-  @("$")
-}
-</h3>
-<h3>@Html.DisplayNameFor(model => model.Vegan): 
+<h4>Stylist: @Model.Stylist.Name</h4>
 
-@if (Model.Vegan == true)
-{
-  @("yes")
-}
-else 
-{
-  @("no")
-}
-</h3>
- *@
