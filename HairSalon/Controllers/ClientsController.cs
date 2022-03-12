@@ -31,8 +31,11 @@ namespace HairSalon.Controllers
     [HttpPost]
     public ActionResult Create(Client client)
     {
-      _db.Clients.Add(client);
-      _db.SaveChanges();
+      if (client.StylistId > 0)
+      {
+        _db.Clients.Add(client);
+        _db.SaveChanges();
+      }
       return RedirectToAction("Index");
     }
 
