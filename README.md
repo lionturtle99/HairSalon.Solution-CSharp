@@ -1,8 +1,8 @@
-<h1 align="center">HairSalon</h1>
+<h1 align="center">Eau Claire's Salon</h1>
 
 #### By: Liam Eller
 
-#### __
+#### _A website make Claire's business run smoother_
 
 ## Technologies Used
 
@@ -11,39 +11,36 @@
 * Markdown
 * CSS
 * Razor
+* Entity
 * ASP .NET Core
 * ASP .NET Core MVC
 
-
 ## Description
 
-__
+_An Applications where Claire can add stylists and clients to better stay organized._
+_User can navigate between pages to add stylists and clients to a database made on MySQL Work Bench._
 
 ## Setup/Installation Requirements
-
-1. Clone this repository to your desktop.
-2. Open your terminal.
-3. Navigate to the downloaded project by typing "cd (name of the project)".
-4. Run "code ." to open program in VSCode to edit or view code.
-5. Navigate to the (name of the project) directory
-6. type "dotnet build" then "dotnet run" to run application in your the terminal.
-
-## Connection String
-
-_Next, we need to add the database connection to our app. We'll do this using the connection string we currently have as a property of the DBConfiguration class in our Startup.cs file._
-
-_Before we move forward with this, it's important to note that the file we are about to create will store sensitive information that we don't want to share with the world. As such, before we make any commits with it in our project, we should add this "*/appsettings.json" to our .gitignore:_
-
-_Now we'll store the connection string in a new file called appsettings.json in the directory of our project's production folder, HairSalon/:_
-
-#### Inside HairSalon/appsettings.json
-{
-    "ConnectionStrings": {
-        "DefaultConnection": "Server=localhost;Port=3306;database=to_do_list;uid=root;pwd=[YOUR-PASSWORD-HERE];"
-    }
-}
-_Note that the database will change based on the database we are connecting to and that uid and pwd may vary as well depending on MySql configurations._
-
+  
+1. Follow the instruction on this [website](https://www.simplilearn.com/tutorials/mysql-tutorial/mysql-workbench-installation) for installing MySQL server, MySQL Workbench, and MySQL shell.  
+5. Clone the repository to your desktop and open your terminal then Navigate to the downloaded project by typing "cd (project-name)"
+2.  Open project in your desired text editor. I recommend [visual studio code.](https://code.visualstudio.com/download)
+3. Create your own database from the .sql file located in the projects top most level by following these steps: 
+  
+    1. In the Administrations tab, under the MANAGEMENT section, click on the Data Import/Restore option.
+    2. In the new window, select Import from Self-Contained File in the Import Option section
+    3. Click the ".." button and select the .sql file in the project directory
+    4. In the Default Schema to be Imported To section, click the "New..." button to create a new schema
+    5. Hit the "Start Import" button at the bottom right of the page (enlarge the window if not seen). And then, confirm it worked in the Schemas tab by right clicking in the SCHEMAS drop down and choosing refresh all from the options
+    
+4. Add a new file called appsettings.json in the project's production folder and store the following
+        `{
+            "ConnectionStrings": {
+                "DefaultConnection": "Server=localhost;Port=3306;database=[NAME-OF-THE-DATABASE-YOU-CREATED-ABOVE];uid=root;pwd=[YOUR-PASSWORD-HERE];"
+            }
+        }`
+5. Once in the project's production folder, type "dotnet watch run" in the terminal - then navigate to your web browser and type http://localhost:5000/ in your url bar to see the application.
+  
 ## Known Bugs
 
 * No known bugs at this time.
